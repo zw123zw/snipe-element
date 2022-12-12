@@ -5,9 +5,10 @@
     v-bind="configs"
     v-on="$listeners"
   >
-    <template slot-scope="item">
-      <slot :item="item"></slot>
+    <template slot-scope="{ node, data }">
+      <slot :data="data" :node="node"></slot>
     </template>
+
     <template slot="empty">
       <slot name="empty"></slot>
     </template>
@@ -24,7 +25,7 @@ export default create({
   mixins: [props(), event()],
   data () {
     return {
-      defaultConfigs: {}
+      attributes: {}
     }
   }
 })

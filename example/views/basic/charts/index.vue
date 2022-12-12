@@ -1,6 +1,6 @@
 <template>
   <div>
-    <dcs-charts ref="testCharts" class="test-charts"></dcs-charts>
+    <snipe-charts ref="testCharts" class="test-charts"></snipe-charts>
   </div>
 </template>
 

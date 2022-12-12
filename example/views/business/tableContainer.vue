@@ -1,6 +1,6 @@
 <template>
   <div>
-    <dcs-table-container
+    <snipe-table-container
       id="test2"
       :tableData="tableData"
       :fileds="tableFieds1"
@@ -32,9 +32,9 @@
           <el-button class="handle" type="text" size="small">删除</el-button>
         </div>
       </template>
-    </dcs-table-container>
+    </snipe-table-container>
 
-    <dcs-table-container
+    <snipe-table-container
       id="test1"
       :tableData="tableData"
       :fileds="tableFieds"
@@ -81,7 +81,7 @@
       <template v-slot:handle>
         <span>zwzwzwzwzwzwzwzw</span>
       </template>
-    </dcs-table-container>
+    </snipe-table-container>
   </div>
 </template>
 

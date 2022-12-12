@@ -28,11 +28,83 @@ const asyncRoutes = [
     component: () => import('@/layout/index'),
     children: [
       {
+        path: 'icon',
+        name: 'Icon',
+        component: () => import('@/views/basic/icon'),
+        meta: {
+          title: 'Icon 图标'
+        }
+      },
+      {
         path: 'input',
         name: 'Input',
         component: () => import('@/views/basic/input'),
         meta: {
-          title: '输入框'
+          title: 'Input 输入框'
+        }
+      },
+      {
+        path: 'button',
+        name: 'Button',
+        component: () => import('@/views/basic/button'),
+        meta: {
+          title: 'Button 按钮'
+        }
+      },
+      {
+        path: 'link',
+        name: 'Link',
+        component: () => import('@/views/basic/link'),
+        meta: {
+          title: 'Link 文字链接'
+        }
+      },
+      {
+        path: 'radio',
+        name: 'Radio',
+        component: () => import('@/views/basic/radio'),
+        meta: {
+          title: 'Radio 单选框'
+        }
+      },
+      {
+        path: 'checkbox',
+        name: 'Checkbox',
+        component: () => import('@/views/basic/checkbox'),
+        meta: {
+          title: 'Checkbox 多选框'
+        }
+      },
+      {
+        path: 'inputNumber',
+        name: 'InputNumber',
+        component: () => import('@/views/basic/inputNumber'),
+        meta: {
+          title: 'InputNumber 计数器'
+        }
+      },
+      {
+        path: 'select',
+        name: 'Select',
+        component: () => import('@/views/basic/select'),
+        meta: {
+          title: 'Select 选择器'
+        }
+      },
+      {
+        path: 'cascader',
+        name: 'Cascader',
+        component: () => import('@/views/basic/cascader'),
+        meta: {
+          title: 'Cascader 级联选择器'
+        }
+      },
+      {
+        path: 'switch',
+        name: 'Switch',
+        component: () => import('@/views/basic/switch'),
+        meta: {
+          title: 'Switch 开关'
         }
       },
       {

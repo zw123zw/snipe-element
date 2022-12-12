@@ -1,8 +1,16 @@
 <template>
-  <el-popover :class="classList" v-bind="configs" v-on="$listeners" v-model="modelValue">
+  <el-popover
+    :class="classList"
+    v-bind="configs"
+    v-on="$listeners"
+    v-model="modelValue"
+  >
     <template>
       <slot></slot>
-      <slot slot="reference" name="reference"></slot>
+    </template>
+
+    <template slot="reference">
+      <slot name="reference"></slot>
     </template>
   </el-popover>
 </template>

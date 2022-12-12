@@ -1,6 +1,6 @@
 <template>
   <div class="app-sidebar">
-    <el-menu :default-active="active">
+    <el-menu :default-active="active" :default-openeds="defaultOpeneds">
       <el-submenu
         :index="index.toString()"
         v-for="(item, index) in allRouteList"
@@ -31,8 +31,9 @@ export default {
   props: {},
   data () {
     return {
-      active: '0',
-      allRouteList: []
+      active: '1-2',
+      allRouteList: [],
+      defaultOpeneds: []
     }
   },
   computed: {},
@@ -40,6 +41,18 @@ export default {
   created () {},
   mounted () {
     this.allRouteList = JSON.parse(localStorage.getItem('routeList'))
+    this.defaultOpeneds = this.allRouteList.map((v, i) => {
+      return i.toString()
+    })
+
+    const path = this.$route.path
+    this.allRouteList.forEach((v, i) => {
+      v.children.forEach((cv, ci) => {
+        if (path.includes(cv.path)) {
+          this.active = `${i}-${ci}`
+        }
+      })
+    })
   },
   methods: {
     // 切换页面
@@ -56,7 +69,7 @@ export default {
   top: 60px;
   left: 0;
   height: calc(100vh - 60px);
-  width: 220px;
+  width: 260px;
   overflow: hidden;
   transition: all 0.3s;
   z-index: 40;

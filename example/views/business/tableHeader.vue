@@ -1,11 +1,11 @@
 <template>
   <div>
-    <dcs-table-header
+    <snipe-table-header
       :fields.sync="fields"
       @updateData="formChange"
       ref="tableHeader"
     >
-    </dcs-table-header>
+    </snipe-table-header>
   </div>
 </template>
 

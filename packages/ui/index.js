@@ -10,9 +10,7 @@ import Button from './button/index.vue'
 import Link from './link/index.vue'
 import Radio from './radio/index.vue'
 import RadioButton from './radio-button/index.vue'
-import RadioGroup from './radio-group/index.vue'
 import Checkbox from './checkbox/index.vue'
-import CheckboxGroup from './checkbox-group/index.vue'
 import CheckboxButton from './checkbox-button/index.vue'
 import Cascader from './cascader/index.vue'
 import CascaderPanel from './cascader-panel/index.vue'
@@ -36,9 +34,7 @@ export default [
   Link,
   Radio,
   RadioButton,
-  RadioGroup,
   Checkbox,
-  CheckboxGroup,
   CheckboxButton,
   InputNumber,
   Cascader,

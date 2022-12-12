@@ -2,7 +2,6 @@
   <el-tooltip :class="classList" v-bind="configs" v-on="$listeners">
     <template>
       <slot></slot>
-      <slot slot="reference" name="reference"></slot>
     </template>
   </el-tooltip>
 </template>
@@ -13,7 +12,7 @@ import props from 'mixins/props'
 import event from 'mixins/event'
 
 export default create({
-  name: 'el-popover',
+  name: 'el-tooltip',
   mixins: [props(), event()],
   data () {
     return {

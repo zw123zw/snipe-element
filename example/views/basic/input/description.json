@@ -38,5 +38,15 @@
       "description": "显示组件",
       "params": ""
     }
+  ],
+  "slots": [
+    {
+      "label": "customBefore",
+      "description": "自定义前置插槽"
+    },
+    {
+      "label": "customAfter",
+      "description": "自定义后置插槽"
+    }
   ]
 }

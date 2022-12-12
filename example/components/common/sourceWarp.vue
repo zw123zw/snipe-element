@@ -19,7 +19,7 @@
     <div class="card-title">属性</div>
     <el-card class="box-card">
       <slot name="attrContext">
-        <el-table :data="attrList" v-if="attrList" style="width: 100%">
+        <el-table :data="attrList" v-if="attrList && attrList.length" style="width: 100%">
           <el-table-column
             :prop="item.prop"
             :label="item.label"
@@ -43,7 +43,7 @@
     <div class="card-title">事件</div>
     <el-card class="box-card">
       <slot name="eventContext">
-        <el-table :data="eventsList" v-if="eventsList" style="width: 100%">
+        <el-table :data="eventsList" v-if="eventsList && eventsList.length" style="width: 100%">
           <el-table-column
             :prop="item.prop"
             :label="item.label"
@@ -67,11 +67,35 @@
     <div class="card-title">方法</div>
     <el-card class="box-card">
       <slot name="methodContext">
-        <el-table :data="methodsList" v-if="methodsList" style="width: 100%">
+        <el-table :data="methodsList" v-if="methodsList && methodsList.length" style="width: 100%">
           <el-table-column
             :prop="item.prop"
             :label="item.label"
             v-for="(item, index) in columnsMethods"
+            :key="index"
+          >
+            <template slot-scope="scope">
+              {{ scope.row[item.prop] || "-" }}
+            </template>
+          </el-table-column>
+        </el-table>
+        <a
+          class="link"
+          href="https://element.eleme.cn/#/zh-CN/component/input"
+          target="_blank"
+          v-else
+          >参考Element</a
+        >
+      </slot>
+    </el-card>
+    <div class="card-title">插槽</div>
+    <el-card class="box-card">
+      <slot name="methodContext">
+        <el-table :data="slotsList" v-if="slotsList && slotsList.length" style="width: 100%">
+          <el-table-column
+            :prop="item.prop"
+            :label="item.label"
+            v-for="(item, index) in columnsSlots"
             :key="index"
           >
             <template slot-scope="scope">
@@ -102,9 +126,10 @@ export default {
     return {
       activeName: '0',
       source: '',
-      attrList: '',
-      eventsList: '',
-      methodsList: '',
+      attrList: [],
+      eventsList: [],
+      methodsList: [],
+      slotsList: [],
       columns: [
         {
           prop: 'label',
@@ -154,6 +179,16 @@ export default {
           prop: 'params',
           label: '参数'
         }
+      ],
+      columnsSlots: [
+        {
+          prop: 'label',
+          label: 'name'
+        },
+        {
+          prop: 'description',
+          label: '说明'
+        }
       ]
     }
   },
@@ -178,6 +213,7 @@ export default {
             this.attrList = res.data.attrs
             this.eventsList = res.data.events
             this.methodsList = res.data.methods
+            this.slotsList = res.data.slots
           }
         })
       } catch (error) {
