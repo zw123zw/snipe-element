@@ -27,7 +27,7 @@ export default {
     }
   },
   inject: {
-    dcsElTable: {
+    snipeElTable: {
       default: ''
     }
   },
@@ -62,10 +62,10 @@ export default {
             // 动态设置悬浮滚动条的样式
             const setScrollStyle = () => {
               requestAnimFrame(() => {
-                const elTable = this.dcsElTable.$el.querySelector('.el-table')
+                const elTable = this.snipeElTable.$el.querySelector('.el-table')
                 this.screenWidth = elTable.offsetWidth
                 this.scrollWidth =
-                  this.dcsElTable.$el.querySelector('.el-table tr').offsetWidth ||
+                  this.snipeElTable.$el.querySelector('.el-table tr').offsetWidth ||
                   0
                 if (this.scrollWidth < this.screenWidth) {
                   this.scrollWidth = this.screenWidth
@@ -81,10 +81,10 @@ export default {
         // 悬浮滚动条滚动同步表格滚动条
         handleScroll: () => {
           requestAnimFrame(() => {
-            this.dcsElTable.$el.getElementsByClassName(
+            this.snipeElTable.$el.getElementsByClassName(
               'el-table__body-wrapper'
             )[0].scrollLeft =
-              this.dcsElTable.$el.querySelector('#fixedScroll').scrollLeft
+              this.snipeElTable.$el.querySelector('#fixedScroll').scrollLeft
           })
         },
         // 移除监听器

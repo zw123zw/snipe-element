@@ -104,14 +104,6 @@ const asyncRoutes = [
         meta: {
           title: 'Sass混入'
         }
-      },
-      {
-        path: 'common',
-        name: 'Common',
-        component: () => import('@/views/reference/common'),
-        meta: {
-          title: '全局样式'
-        }
       }
     ]
   }

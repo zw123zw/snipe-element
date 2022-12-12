@@ -1,0 +1,14 @@
+.el-radio__input.is-checked + .el-radio__label,
+.el-radio-button__inner:hover{
+    color: $--color-primary;
+}
+.el-radio__input.is-checked .el-radio__inner{
+    border-color: $--color-primary;
+    background: $--color-primary;
+}
+.el-radio-button__orig-radio:checked + .el-radio-button__inner{
+    color: #FFF;
+    background-color: $--color-primary;
+    border-color: $--color-primary;
+    box-shadow: -1px 0 0 0 $--color-primary;
+}

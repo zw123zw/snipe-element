@@ -1,6 +1,6 @@
 <template>
   <div class="app-header">
-    <p>数字化平台组件库</p>
+    <p>snipe-element</p>
     <div class="header-right">
       <el-dropdown>
         <span class="el-dropdown-link">

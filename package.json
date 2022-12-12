@@ -1,7 +1,7 @@
 {
   "name": "yk-dcs-element",
   "version": "1.5.9",
-  "description": "数字化平台组件库",
+  "description": "snipe-element",
   "author": "zw",
   "main": "lib/dcs-element.js",
   "scripts": {

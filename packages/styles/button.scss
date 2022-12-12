@@ -1,0 +1,10 @@
+.el-button--primary {
+  background-color: $--color-primary;
+  border-color: $--color-primary;
+}
+.el-checkbox-button__inner:hover {
+  color: $--color-primary;
+}
+.el-checkbox-button.is-checked:first-child .el-checkbox-button__inner {
+  border-left-color: $--color-primary;
+}

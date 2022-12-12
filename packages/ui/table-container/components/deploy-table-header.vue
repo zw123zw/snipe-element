@@ -76,7 +76,7 @@ export default {
     }
   },
   inject: {
-    dcsElTable: {
+    snipeElTable: {
       default: ''
     }
   },
@@ -157,10 +157,10 @@ export default {
     getStorage () {
       let val = window.localStorage.getItem('dcs_table_header_deploy')
       val = val ? JSON.parse(val) : {}
-      const name = this.dcsElTable.hashName
+      const name = this.snipeElTable.hashName
       const res = val[name]
-        ? val[name][this.dcsElTable.id]
-          ? val[name][this.dcsElTable.id]
+        ? val[name][this.snipeElTable.id]
+          ? val[name][this.snipeElTable.id]
           : undefined
         : undefined
       return res
@@ -169,13 +169,13 @@ export default {
     setStorage () {
       let oldData = window.localStorage.getItem('dcs_table_header_deploy')
       oldData = oldData ? JSON.parse(oldData) : {}
-      const name = this.dcsElTable.hashName
+      const name = this.snipeElTable.hashName
 
       if (!oldData[name]) {
         oldData[name] = {}
       }
 
-      oldData[name][this.dcsElTable.id] = this.newFileds.map((v) => {
+      oldData[name][this.snipeElTable.id] = this.newFileds.map((v) => {
         return {
           key: v.key,
           deployShow: v.deployShow

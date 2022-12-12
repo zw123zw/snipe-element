@@ -1,22 +1,23 @@
 export default function () {
   return {
     props: {
-      elData: String | Array | Object
+      originalValue: String | Array | Object | Boolean | Function
     },
     model: {
-      prop: 'elData',
+      prop: 'originalValue',
       event: 'change'
     },
     data () {
       return {
-        text: ''
+        modelValue: ''
       }
     },
     computed: {
       configs: function () {
         return Object.assign(
           {},
-          this.attributes,
+          this.$dcsElement.options.configs,
+          this.defaultConfigs,
           this.$attrs
         )
       },
@@ -37,9 +38,9 @@ export default function () {
       }
     },
     watch: {
-      elData: {
+      originalValue: {
         handler: function (val) {
-          this.text = val
+          this.modelValue = val
         },
         immediate: true,
         deep: true
@@ -47,7 +48,7 @@ export default function () {
     },
     methods: {
       handleChange () {
-        this.$emit('change', this.text)
+        this.$emit('change', this.modelValue)
       }
     }
   }

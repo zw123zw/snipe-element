@@ -230,7 +230,7 @@ export default create({
   },
   provide () {
     return {
-      dcsElTable: this
+      snipeElTable: this
     }
   },
   computed: {

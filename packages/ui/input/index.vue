@@ -1,7 +1,7 @@
 <template>
   <el-input
     :class="classList"
-    v-model="text"
+    v-model="modelValue"
     v-bind="configs"
     v-on="$listeners"
     @input="handleChange"
@@ -25,7 +25,7 @@ export default create({
   mixins: [props(), event()],
   data () {
     return {
-      attributes: {}
+      defaultConfigs: {}
     }
   }
 })

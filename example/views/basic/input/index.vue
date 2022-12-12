@@ -4,11 +4,11 @@
       <template #main>
         <el-row>
           <div class="demo-title">普通状态</div>
-          <dcs-el-input v-model="name"></dcs-el-input>
+          <snipe-el-input v-model="name"></snipe-el-input>
         </el-row>
         <el-row>
           <div class="demo-title">禁用状态</div>
-          <dcs-el-input v-model="name1" :disabled="true"></dcs-el-input>
+          <snipe-el-input v-model="name1" :disabled="true"></snipe-el-input>
         </el-row>
       </template>
     </source-warp>

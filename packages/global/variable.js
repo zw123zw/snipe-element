@@ -1,1 +1,1 @@
-export const KEY_COMPONENT_NAME = 'dcs-'
+export const KEY_COMPONENT_NAME = 'snipe-'

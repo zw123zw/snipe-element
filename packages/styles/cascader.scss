@@ -1,0 +1,9 @@
+.el-cascader .el-input.is-focus .el-input__inner {
+  border-color: $--color-primary;
+}
+
+.el-cascader-node.in-active-path,
+.el-cascader-node.is-active,
+.el-cascader-node.is-selectable.in-checked-path {
+  color: $--color-primary;
+}

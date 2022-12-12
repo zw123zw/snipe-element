@@ -1,0 +1,10 @@
+.el-checkbox__input.is-checked + .el-checkbox__label{
+    color: $--color-primary;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner,
+.el-checkbox-button.is-checked .el-checkbox-button__inner{
+    background-color: $--color-primary;
+    border-color: $--color-primary;
+}
