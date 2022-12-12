@@ -20,8 +20,7 @@
     "vue": "^2.6.10",
     "vue-router": "^3.1.3",
     "vuedraggable": "^2.24.3",
-    "vuex": "^3.6.2",
-    "yk-dcs-platform": "git+http://wei.zhang14@yintech.cn:zw19951106..@gitlab.yintech.net/tc/crm/yk-digital-platform/digital-front/yk-dcs-platform.git#dev"
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",

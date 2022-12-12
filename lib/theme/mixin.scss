@@ -1,0 +1,63 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin scroll-bar {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #e1e3eb;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin text-overflow($line) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin drawer-close {
+  position: absolute;
+  top: -2px;
+  left: -30px;
+  width: 33px;
+  height: 53px;
+  cursor: pointer;
+}
+
+@mixin placeholder($color: #c0c4cc, $size: 13px) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-size: $size;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+    font-size: $size;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+    font-size: $size;
+  }
+}
