@@ -1,0 +1,10 @@
+.el-upload {
+  input[type="file"] {
+    display: none !important;
+  }
+}
+
+.el-input__inner:focus,
+.el-textarea__inner:focus {
+  border-color: $--color-primary;
+}

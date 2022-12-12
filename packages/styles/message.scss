@@ -1,0 +1,81 @@
+@import "./icon/iconfont.css";
+
+.el-message {
+  min-width: auto !important;
+  max-width: 400px !important;
+  background: #ffffff !important;
+  box-shadow: 0px 4px 16px 0px rgba(41, 44, 51, 0.1) !important;
+  border-radius: 4px !important;
+  border: 1px solid #e8e9eb !important;
+  padding: 12px 16px !important;
+
+  [class*=" el-icon-"] {
+    font-family: "iconfont" !important;
+    font-size: 20px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin-right: 8px;
+  }
+
+  .el-message__content {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #292c33 !important;
+    padding-right: 24px !important;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .el-icon-success {
+    color: #12B362;
+
+    &::before {
+      content: "\e694";
+    }
+  }
+
+  .el-icon-warning {
+    color: #ff9933;
+
+    &::before {
+      content: "\e6a2";
+    }
+  }
+
+  .el-icon-info {
+    color: #1a66ff;
+
+    &::before {
+      content: "\e6a7";
+    }
+  }
+
+  .el-icon-error {
+    color: #ff4d4d;
+
+    &::before {
+      content: "\e69a";
+    }
+  }
+
+  .el-icon-loading {
+    color: #1a66ff;
+    
+    &::before {
+      content: "\e68f";
+    }
+  }
+
+  .el-icon-close {
+    font-size: 16px;
+    margin-right: 0;
+
+    &::before {
+      content: "\e691";
+    }
+  }
+}

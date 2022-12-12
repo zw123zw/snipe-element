@@ -1,0 +1,42 @@
+{
+  "attrs": [
+    {
+      "label": "type",
+      "description": "类型",
+      "type": "string",
+      "value": "text",
+      "fields": "number/text/date"
+    },
+    {
+      "label": "maxlength",
+      "description": "最大长度",
+      "type": "string/number",
+      "value": "20",
+      "fields": ""
+    }
+  ],
+  "events": [
+    {
+      "label": "input",
+      "description": "当数据输入时会触发该事件",
+      "params": "value"
+    },
+    {
+      "label": "change",
+      "description": "当数据改变时会触发该事件",
+      "params": "row, selected"
+    }
+  ],
+  "methods": [
+    {
+      "label": "hidden",
+      "description": "隐藏组件",
+      "params": ""
+    },
+    {
+      "label": "show",
+      "description": "显示组件",
+      "params": ""
+    }
+  ]
+}
