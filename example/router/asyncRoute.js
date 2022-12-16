@@ -108,6 +108,14 @@ const asyncRoutes = [
         }
       },
       {
+        path: 'slider',
+        name: 'Slider',
+        component: () => import('@/views/basic/slider'),
+        meta: {
+          title: 'Slider 滑块'
+        }
+      },
+      {
         path: 'message',
         name: 'Message',
         component: () => import('@/views/basic/message'),

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="source-warp">
     <div class="card-title">基础用法</div>
     <el-card class="box-card">
       <slot name="main">
