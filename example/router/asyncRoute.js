@@ -116,6 +116,14 @@ const asyncRoutes = [
         }
       },
       {
+        path: 'timePicker',
+        name: 'TimePicker',
+        component: () => import('@/views/basic/timePicker'),
+        meta: {
+          title: 'TimePicker 时间选择器'
+        }
+      },
+      {
         path: 'message',
         name: 'Message',
         component: () => import('@/views/basic/message'),

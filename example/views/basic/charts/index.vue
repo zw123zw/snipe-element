@@ -1,6 +1,12 @@
 <template>
   <div>
-    <snipe-charts ref="testCharts" class="test-charts"></snipe-charts>
+    <source-warp>
+      <template #main>
+        <el-row>
+          <snipe-charts ref="testCharts" class="test-charts"></snipe-charts>
+        </el-row>
+      </template>
+    </source-warp>
   </div>
 </template>
 

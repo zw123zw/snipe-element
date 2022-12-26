@@ -1,0 +1,167 @@
+{
+  "attrs": [
+    {
+      "label": "id",
+      "description": "ID",
+      "type": "string",
+      "value": "",
+      "fields": ""
+    },
+    {
+      "label": "tableData",
+      "description": "表格显示的数据",
+      "type": "array",
+      "value": "",
+      "fields": ""
+    },
+    {
+      "label": "fileds",
+      "description": "表格显示的列",
+      "type": "array",
+      "value": "",
+      "fields": "key，label，sortable，width，slotHeader，fixed，showTooltip"
+    },
+    {
+      "label": "showIndex",
+      "description": "是否显示索引项",
+      "type": "boolean",
+      "value": "",
+      "fields": ""
+    },
+    {
+      "label": "defaultSort",
+      "description": "表格默认排序的值",
+      "type": "object",
+      "value": "",
+      "fields": ""
+    },
+    {
+      "label": "showPagination",
+      "description": "是否显示分页器",
+      "type": "boolean",
+      "value": "",
+      "fields": ""
+    },
+    {
+      "label": "hideOnSinglePage",
+      "description": "只有一页时是否隐藏",
+      "type": "boolean",
+      "value": "",
+      "fields": ""
+    },
+    {
+      "label": "showSelection",
+      "description": "是否支持多选",
+      "type": "boolean",
+      "value": "false",
+      "fields": "true/false"
+    },
+    {
+      "label": "pagerCount",
+      "description": "页码按钮的数量，当总页数超过该值时会折叠",
+      "type": "number",
+      "value": "",
+      "fields": ""
+    },
+    {
+      "label": "rowKey",
+      "description": "行数据的 Key，用来优化 Table 的渲染",
+      "type": "string",
+      "value": "",
+      "fields": ""
+    },
+    {
+      "label": "pagination",
+      "description": "分页器选项",
+      "type": "object",
+      "value": "",
+      "fields": "page，pageSize，pageSizes，layout，total"
+    },
+    {
+      "label": "loading",
+      "description": "是否在加载中",
+      "type": "boolean",
+      "value": "",
+      "fields": ""
+    },
+    {
+      "label": "tableProps",
+      "description": "el-table的其他Attributes",
+      "type": "object",
+      "value": "",
+      "fields": "参考el-table的Table Attributes"
+    },
+    {
+      "label": "tableEvents",
+      "description": "el-table的其他Events",
+      "type": "object",
+      "value": "",
+      "fields": "参考el-table的Table Events"
+    },
+    {
+      "label": "height",
+      "description": "表格高度",
+      "type": "string",
+      "value": "",
+      "fields": ""
+    },
+    {
+      "label": "defaultVal",
+      "description": "表格中数据为空的默认值",
+      "type": "string",
+      "value": "-",
+      "fields": ""
+    },
+    {
+      "label": "fixedScroll",
+      "description": "是否开启横向滚动条吸底",
+      "type": "boolean",
+      "value": "false",
+      "fields": ""
+    },
+    {
+      "label": "deployTableHeader",
+      "description": "是否支持表格项排序",
+      "type": "boolean",
+      "value": "false",
+      "fields": ""
+    },
+    {
+      "label": "customEmpty",
+      "description": "是否有统一的空数据提示",
+      "type": "boolean",
+      "value": "true",
+      "fields": ""
+    }
+  ],
+  "events": [
+    {
+      "label": "resizeChange",
+      "description": "当图表resize时会触发该事件",
+      "params": ""
+    }
+  ],
+  "methods": [
+    {
+      "label": "init",
+      "description": "使图表初始化的方法",
+      "params": "options（参考Echarts）"
+    },
+    {
+      "label": "dispose",
+      "description": "使图表dispose的方法",
+      "params": ""
+    },
+    {
+      "label": "chartsResize",
+      "description": "使图表resize的方法",
+      "params": ""
+    },
+    {
+      "label": "getChartInstance",
+      "description": "获取图表实例的方法",
+      "params": ""
+    }
+  ],
+  "slots": []
+}

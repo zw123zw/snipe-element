@@ -1,5 +1,5 @@
 <template>
-  <div class="dcs-chart" ref="dcsChart"></div>
+  <div class="dcs-chart" ref="dcsChart" :id="ccid"></div>
 </template>
 
 <script>
@@ -9,12 +9,24 @@ import { init as EChartsInit } from 'echarts'
 export default create({
   name: 'charts',
   components: {},
-  data () {
-    return {
-      charEch: null
+  props: {
+    id: {
+      type: String,
+      default: ''
     }
   },
-  computed: {},
+  data () {
+    return {
+      charEch: null,
+      idInitial: 0
+    }
+  },
+  computed: {
+    ccid: function () {
+      const idRow = Number(this.id) > this.idInitial ? this.id : ++this.idInitial
+      return idRow
+    }
+  },
   watch: {},
   created () {},
   mounted () {
@@ -35,6 +47,10 @@ export default create({
     },
     chartsResize () {
       this.charEch && this.charEch.resize()
+      this.$emit('resizeChange')
+    },
+    getChartInstance () {
+      return this.charEch
     }
   },
   beforeDestroy () {

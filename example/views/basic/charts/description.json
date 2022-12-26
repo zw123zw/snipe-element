@@ -1,6 +1,41 @@
 {
-  "attrs": [],
-  "events": [],
-  "methods": [],
+  "attrs": [
+    {
+      "label": "id",
+      "description": "ID",
+      "type": "string",
+      "value": "",
+      "fields": ""
+    }
+  ],
+  "events": [
+    {
+      "label": "resizeChange",
+      "description": "当图表resize时会触发该事件",
+      "params": ""
+    }
+  ],
+  "methods": [
+    {
+      "label": "init",
+      "description": "使图表初始化的方法",
+      "params": "options（参考Echarts）"
+    },
+    {
+      "label": "dispose",
+      "description": "使图表dispose的方法",
+      "params": ""
+    },
+    {
+      "label": "chartsResize",
+      "description": "使图表resize的方法",
+      "params": ""
+    },
+    {
+      "label": "getChartInstance",
+      "description": "获取图表实例的方法",
+      "params": ""
+    }
+  ],
   "slots": []
 }

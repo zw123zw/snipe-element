@@ -17,11 +17,11 @@
           </el-row>
           <el-row>
             <span class="demonstration">格式化 Tooltip</span>
-            <!-- <snipe-el-slider
+            <snipe-el-slider
               v-model="value4"
               :format-tooltip="formatTooltip"
               show-input
-            ></snipe-el-slider> -->
+            ></snipe-el-slider>
           </el-row>
           <el-row>
             <span class="demonstration">禁用</span>
